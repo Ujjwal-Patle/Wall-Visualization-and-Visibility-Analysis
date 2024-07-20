@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wall Visualization</h1>
+        <div class="input-section">
+            <label for="numWalls" >Number of Walls:</label>
+            <input type="number" id="numWalls" placeholder="Enter number of walls">
+            <br>
+            <label for="wallHeights">Height of Walls (separated by '#'):</label>
+            <input type="text" id="wallHeights" placeholder="e.g., 5#4#1">
+            <br>
+            <button onclick="visualizeWalls()">Visualize Walls</button>
+        </div>
+        <div class="display">
+            <div class="person"><img src="left.png" alt="left view"></div>
+            <div id="wallContainer" class="wall-container"></div>
+            <div class="person"><img src="right.png" alt="right view"></div>
+        </div>
+
+        <div class="result-section">
+            <p>Visible from Left: <span class="ans" id="visibleLeft">0</span></p>
+            <p>Visible from Right: <span class="ans" id="visibleRight">0</span></p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
