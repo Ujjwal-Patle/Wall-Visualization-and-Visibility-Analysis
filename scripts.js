@@ -26,24 +26,24 @@ function visualizeWalls() {
 
 
 function calculateVisibleWalls(heights, direction) {
-    let visibleCount = 0;
-    let maxSeen = 0;
+    let vCount = 0;
+    let maxHig = 0;
 
     if (direction === 'left') {
         for (const height of heights) {
-            if (height > maxSeen) {
-                visibleCount++;
-                maxSeen = height;
+            if (height > maxHig) {
+                vCount++;
+                maxHig = height;
             }
         }
     } else if (direction === 'right') {
         for (const height of heights.slice().reverse()) {
-            if (height > maxSeen) {
-                visibleCount++;
-                maxSeen = height;
+            if (height > maxHig) {
+                vCount++;
+                maxHig = height;
             }
         }
     }
 
-    return visibleCount;
+    return vCount;
 }
